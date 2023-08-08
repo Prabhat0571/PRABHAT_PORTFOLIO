@@ -82,10 +82,7 @@ a {
     padding: 0 4em;
 }
 
-#ICON{
-    width: 30px;
-    cursor: pointer;
-}
+
 
 .nav-items div {
     transition: all 0.5s;
@@ -131,8 +128,7 @@ a {
     margin: 4rem auto;
     padding: 0 1rem;
     padding-bottom: 8rem;
-    background: var(--primary-color);
-    background: var(--secondary-color);
+   
 }
 
 .faded-text {
