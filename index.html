@@ -6,309 +6,266 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prabhat Kumar - Full Stack Web Developer Portfolio showcasing projects, skills, and experience in web development." />
     <title>Prabhat Kumar</title>
     <link rel="shortcut icon" href="./images/userAsset/NavLogo2.png" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar container">
-        <!-- Logo -->
-        <div class="logo-group">
-            <!-- <img class="nav-logo" src="./images/userAsset/NavLogo.png" /> -->
-            <!-- <h2 class="nav-logo-text">प्रrabhat</h2> -->
+    <!-- Three.js Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar container">
+            <!-- Logo -->
+            <div class="logo-group">
+                <!-- <img class="nav-logo" src="./images/userAsset/NavLogo.png" /> -->
+                <!-- <h2 class="nav-logo-text">प्रrabhat</h2> -->
+            </div>
+
+            <!-- Nav Items -->
+            <div class="nav-items">
+                <div><a href="#projects">Projects</a></div>
+                <div><a href="#skills">Skills</a></div>
+                <div><a href="#contactme">Contact Me</a></div>
+                <div><a href="#contactme">Resume</a></div>
+
+
+            </div>
+
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section container">
+            <div class="absolute faded-text">Prabhat</div>
+            <!-- Left Section -->
+            <div class="hero-section-left">
+                <!-- Heading -->
+                <div class="hero-section-heading">Hi! प्रभात Here</div>
+                <div class="hero-section-heading herosection-sub-heading">
+                    I am a <span class="role"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="hero-section-description">
+                    I'm a software developer and here is my portfolio website. Here you'll learn about my journey as a software developer.
+                </div>
+
+                <!-- CTA Button -->
+                <div class="btn-pink" id="btn-top">Hire me</div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="hero-section-right">
+                <div class="absolute icons icon-dots">
+                    <img src="./images/userAsset/dots.png" alt="" />
+                </div>
+                <div class="absolute icons icon-cube">
+                    <img src="./images/userAsset/cube.png" alt="" />
+                </div>
+                <div class="absolute icons icon-circle">
+                    <img src="./images/userAsset/circle.png" alt="" />
+                </div>
+                <div class="absolute icons icon-zigzak">
+                    <img src="./images/userAsset/zigzags.png" alt="" />
+                </div>
+                <div class="absolute icons icon-plus">
+                    <img src="./images/userAsset/plus.png" alt="" />
+                </div>
+                <div class="user-image">
+                    <img src="./images/userAsset/UserImage.png" alt="" width="345" height="390" />
+                </div>
+            </div>
+
+            <div class="btn-pink" id="btn-bottom">Hire me</div>
         </div>
 
-        <!-- Nav Items -->
-        <div class="nav-items">
-            <div><a href="#projects">Projects</a></div>
-            <div><a href="#skills">Skills</a></div>
-            <div><a href="#contactme">Contact Me</a></div>
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="./images/projects/Project1.png" alt="Tint & Orange Project">
+                    <div class="project-info">
+                        <h3>Tint & Orange</h3>
+                        <p>A car modification company which provides sheets to protect your car from scratches.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-pink">Read More</a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <img src="./images/projects/Project2.png" alt="Breaking Copyrights Project">
+                    <div class="project-info">
+                        <h3>Breaking Copyrights</h3>
+                        <p>A platform to download copyright-free YouTube music.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-pink">Read More</a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="./images/projects/Project3.png" alt="Isha Tattva Project">
+                    <div class="project-info">
+                        <h3>Isha Tattva</h3>
+                        <p>A website for interior designers to showcase their works and samples.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-pink">Read More</a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="./images/projects/Project4.png" alt="Granit Project">
+                    <div class="project-info">
+                        <h3>Granit</h3>
+                        <p>An architectural website to plan your building or home (Hebrew Language).</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-pink">Read More</a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <div id="skills" class="container skills-container">
+            <div class="absolute skill-fade-text">&........</div>
+            <!-- Left Section -->
+            <div class="skill-container-left">
+                <h2 class="skill-heading">
+                    <span class="caps">M</span>e and
+                    <br /> MyTech Stack
+                </h2>
+                <div class="skill-subHeading">
+                    <p>
+                        Hi, I’m Prabhat Kumar — a Full Stack Web Developer
+Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I’m a recent Computer Science graduate from GGSIPU, with internship experience at IBM and Frisky Designs. Currently focused on building real-world web apps and improving my DSA skills. Passionate about clean code, problem-solving, and continuous learning.
+
+
+                        
+                </div>
+            </div>
+
+            <!-- Right Section -->
+
+            <div class="skill-container-right">
+                <img src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
+
+                <img src="./images/stack/HTML.png" alt="" class="skills-logo" />
+                <img src="./images/stack/CSS.png" alt="" class="skills-logo" />
+                <img src="./images/stack/Javascript.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/React.png" alt="" class="skills-logo" />
+                <img src="./images/stack/NodeJs.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Next.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Redux.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Tailwind.png" alt="" class="skills-logo" />
+                <img src="./images/stack/Bootstrap.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/MaterialUI.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Express.png" alt="" class="skills-logo" />
+                <img src="./images/stack/Git.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Github.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Graphql.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/MongoDB.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Vercel.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/ChartJs.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Bash.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/Docker.svg" alt="" class="skills-logo" />
+                <img src="./images/stack/K8s.svg" alt="" class="skills-logo" />
+            </div>
         </div>
 
-    </nav>
+        <!-- Contact Us -->
+        <div id="contactme" class="contactus-container">
+            <div class="container">
+                <h1 class="contactus-heading">Contact Me</h1>
+                <h3 class="contactus-sub-heading">
+                    Questions, thoughts, or just want to say hello?
+                </h3>
 
-    <!-- Hero Section -->
-    <div class="hero-section container">
-        <div class="absolute faded-text">Prabhat</div>
-        <!-- Left Section -->
-        <div class="hero-section-left">
-            <!-- Heading -->
-            <div class="hero-section-heading">Hi! प्रभात Here</div>
-            <div class="hero-section-heading herosection-sub-heading">
-                I am a <span class="role"></span>
-            </div>
-
-            <!-- Description -->
-            <div class="hero-section-description">
-                I’m a software developer and here is my portfolio website. Here you’ll learn about my journey as a software developer.
-            </div>
-
-            <!-- CTA Button -->
-            <div class="btn-pink" id="btn-top">Hire me</div>
-        </div>
-
-        <!-- Right Section -->
-        <div class="hero-section-right">
-            <div class="absolute icons icon-dots">
-                <img src="./images/userAsset/dots.png" alt="" />
-            </div>
-            <div class="absolute icons icon-cube">
-                <img src="./images/userAsset/cube.png" alt="" />
-            </div>
-            <div class="absolute icons icon-circle">
-                <img src="./images/userAsset/circle.png" alt="" />
-            </div>
-            <div class="absolute icons icon-zigzak">
-                <img src="./images/userAsset/zigzags.png" alt="" />
-            </div>
-            <div class="absolute icons icon-plus">
-                <img src="./images/userAsset/plus.png" alt="" />
-            </div>
-            <div class="user-image">
-                <img src="./images/userAsset/UserImage.png" alt="" width="345" height="390" />
+                <div class="contactus-form-container">
+                    <form class="form" action="https://formspree.io/f/mlekrnnl" method="post">
+                        <div class="formfield-container">
+                            <input class="formfield" type="text" name="name" id="" placeholder="Enter your name" />
+                        </div>
+                        <div class="formfield-container">
+                            <input class="formfield" type="email" name="email" id="" placeholder="Enter your email address" />
+                        </div>
+                        <div class="formfield-container">
+                            <input class="formfield" type="text" name="subject" id="" placeholder="Enter your subject" />
+                        </div>
+                        <div class="formfield-container">
+                            <textarea name="message" id="" cols="30" rows="10" class="formfield formfield-textarea" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn-pink" id="submit-btn">
+                  Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
+                </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <div class="btn-pink" id="btn-bottom">Hire me</div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Prabhat Kumar</h3>
+                        <p>Full Stack Web Developer passionate about creating beautiful and functional web applications.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contactme">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Prabhat Kumar. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <!-- Projects -->
-    <section id="projects" class="projects">
-        <h2 class="page-header">Projects</h2>
-        <div class="project-container">
-            <div class="project-card" id="project1">
-                <div class="project-number project-number-left">01</div>
-                <div class="project-content project-content-left">
-                    <div class="project-skill-container">
-                        <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                        <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/Express.png" alt="" />
-                        <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
-                        <img class="project-skill" src="./images/stack/NodeJs.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/MongoDB.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/Redux.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
-                    </div>
-                    <h2 class="project-heading">Tint & Orange</h2>
-                    <p class="project-sub-heading">
-                        Its is a car modification copany which provide you sheets to protect your car from scratch
-                    </p>
-                    <div class="btn-group">
-                        <button class="btn-pink btn-project">Read More</button>
-                        <a href="">
-              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
-            </a>
-                        <a href="">
-              <i title="Live Link" class="fa-solid fa-link icon"></i>
-            </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" id="project2">
-                <div class="project-number project-number-right">02</div>
-                <div class="project-content project-content-right">
-                    <div class="project-skill-container">
-                        <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                        <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Redux.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
-                    </div>
-                    <h2 class="project-heading">Breaking Copyrights</h2>
-                    <p class="project-sub-heading">
-                        A platform to download copyrights free youtube music
-                    </p>
-                    <div class="btn-group">
-                        <button class="btn-pink btn-project">Read More</button>
-                        <a href="">
-              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
-            </a>
-                        <a href="">
-              <i title="Live Link" class="fa-solid fa-link icon"></i>
-            </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" id="project3">
-                <div class="project-number project-number-left">03</div>
-                <div class="project-content project-content-left">
-                    <div class="project-skill-container">
-                        <img class="project-skill" src="./images/stack/HTML.png" alt="" />
-                        <img class="project-skill" src="./images/stack/CSS.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Javascript.svg" alt="" />
-                        <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
-                    </div>
-
-                    <h2 class="project-heading">Isha Tattva</h2>
-                    <p class="project-sub-heading">
-                        A Website for interior designer to showcase her works and samples
-                    </p>
-                    <div class="btn-group">
-                        <button class="btn-pink btn-project">Read More</button>
-                        <a href="">
-              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
-            </a>
-                        <a href="">
-              <i title="Live Link" class="fa-solid fa-link icon"></i>
-            </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" id="project4">
-                <div class="project-number project-number-right">04</div>
-                <div class="project-content project-content-right">
-                    <div class="project-skill-container">
-                        <img class="project-skill" src="./images/stack/NextJsCircle.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Tailwind.png" alt="" />
-                        <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />
-                    </div>
-                    <h2 class="project-heading">Granit</h2>
-                    <p class="project-sub-heading">
-                        A architectural website to plan your building or home (Hebrew Language)
-                    </p>
-                    <div class="btn-group">
-                        <button class="btn-pink btn-project">Read More</button>
-                        <a href="">
-              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
-            </a>
-                        <a href="">
-              <i title="Live Link" class="fa-solid fa-link icon"></i>
-            </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <div id="skills" class="container skills-container">
-        <div class="absolute skill-fade-text">&........</div>
-        <!-- Left Section -->
-        <div class="skill-container-left">
-            <h2 class="skill-heading">
-                <span class="caps">M</span>e and
-                <br /> MyTech Stack
-            </h2>
-            <div class="skill-subHeading">
-                <p>
-                    Hi Everyone My name is Prabhat kumar I am a Full Stack web developer.
-                I am skilled in technologies like HTML, TailwindCSS, Javascript, NodeJs ,React etc.
-                I am currently pursueing engineering in computer science 
-                and currently practicing data structures and algorithms and full stack web
-                 development
-                    
-            </div>
-        </div>
-
-        <!-- Right Section -->
-
-        <div class="skill-container-right">
-            <img src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
-
-            <img src="./images/stack/HTML.png" alt="" class="skills-logo" />
-            <img src="./images/stack/CSS.png" alt="" class="skills-logo" />
-            <img src="./images/stack/Javascript.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/React.png" alt="" class="skills-logo" />
-            <img src="./images/stack/NodeJs.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Next.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Redux.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Tailwind.png" alt="" class="skills-logo" />
-            <img src="./images/stack/Bootstrap.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/MaterialUI.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Express.png" alt="" class="skills-logo" />
-            <img src="./images/stack/Git.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Github.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Graphql.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/MongoDB.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Vercel.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/ChartJs.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Bash.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/Docker.svg" alt="" class="skills-logo" />
-            <img src="./images/stack/K8s.svg" alt="" class="skills-logo" />
-        </div>
-    </div>
-
-    <!-- Contact Us -->
-    <div id="contactme" class="contactus-container">
-        <div class="container">
-            <h1 class="contactus-heading">Contact Me</h1>
-            <h3 class="contactus-sub-heading">
-                Questions, thoughts, or just want to say hello?
-            </h3>
-
-            <div class="contactus-form-container">
-                <form class="form" action="https://formspree.io/f/mlekrnnl" method="post">
-                    <div class="formfield-container">
-                        <input class="formfield" type="text" name="name" id="" placeholder="Enter your name" />
-                    </div>
-                    <div class="formfield-container">
-                        <input class="formfield" type="email" name="email" id="" placeholder="Enter your email address" />
-                    </div>
-                    <div class="formfield-container">
-                        <input class="formfield" type="text" name="subject" id="" placeholder="Enter your subject" />
-                    </div>
-                    <div class="formfield-container">
-                        <textarea name="message" id="" cols="30" rows="10" class="formfield formfield-textarea" placeholder="Enter your message"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn-pink" id="submit-btn">
-              Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
-            </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container footer-wrapper">
-            <div class="footer-faded-text">प्रभात</div>
-            <div class="link-wrapper">
-                <div>
-                    <a href="#projects">Projects</a>
-                </div>
-                <div>
-                    <a href="#skills">Skills</a>
-                </div>
-                <div>
-                    <a href="#contactme">Contact Me</a>
-                </div>
-            </div>
-
-            <div class="icon-wrapper">
-                <i class="fa-brands fa-linkedin icon"></i>
-                <i class="fa-brands fa-github icon"></i>
-                <i class="fa-brands fa-twitter icon"></i>
-                <i class="fa-brands fa-instagram icon"></i>
-                <i class="fa-regular fa-envelope icon"></i>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="animation.js"></script>
     <script>
-        var typeData = new Typed(".role", {
+        // Initialize Typed.js
+        var typed = new Typed(".role", {
             strings: [
                 "Full Stack Developer",
                 "Web Developer",
-                "Frontend Developer",
+                "UI/UX Designer",
                 "Backend Developer",
-                "Coder",
-                "Problem Solver",
+                "Frontend Developer"
             ],
             loop: true,
             typeSpeed: 100,
