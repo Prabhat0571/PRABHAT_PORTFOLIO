@@ -58,7 +58,7 @@
                 </div>
 
                 <!-- CTA Button -->
-                <div class="btn-pink" id="btn-top">Hire me</div>
+                <div class="btn-pink" id="btn-top" onclick="window.open('https://www.linkedin.com/in/prabhat-kumar-b06700152/')">Hire Me</div>
             </div>
 
             <!-- Right Section -->
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="btn-pink" id="btn-bottom">Hire me</div>
+            <div class="btn-pink" id="btn-bottom" >Hire me</div>
         </div>
 
         <!-- Projects -->
@@ -129,8 +129,8 @@
                 </h2>
                 <div class="skill-subHeading">
                     <p>
-                        Hi, I’m Prabhat Kumar — a Full Stack Web Developer
-Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I’m a recent Computer Science graduate from GGSIPU, with internship experience at IBM and Frisky Designs. Currently focused on building real-world web apps and improving my DSA skills. Passionate about clean code, problem-solving, and continuous learning.
+                        Hi, I'm Prabhat Kumar — a Full Stack Web Developer
+Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I'm a recent Computer Science graduate from GGSIPU, with internship experience at IBM and Frisky Designs. Currently focused on building real-world web apps and improving my DSA skills. Passionate about clean code, problem-solving, and continuous learning.
 
 
                         
@@ -174,24 +174,25 @@ Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I
                 </h3>
 
                 <div class="contactus-form-container">
-                    <form class="form" action="https://formspree.io/f/mlekrnnl" method="post">
+                    <form class="form" action="https://formspree.io/f/xdkzajgk" method="POST" id="contact-form">
                         <div class="formfield-container">
-                            <input class="formfield" type="text" name="name" id="" placeholder="Enter your name" />
+                            <input class="formfield" type="text" name="name" id="name" placeholder="Enter your name" required />
                         </div>
                         <div class="formfield-container">
-                            <input class="formfield" type="email" name="email" id="" placeholder="Enter your email address" />
+                            <input class="formfield" type="email" name="email" id="email" placeholder="Enter your email address" required />
                         </div>
                         <div class="formfield-container">
-                            <input class="formfield" type="text" name="subject" id="" placeholder="Enter your subject" />
+                            <input class="formfield" type="text" name="subject" id="subject" placeholder="Enter your subject" required />
                         </div>
                         <div class="formfield-container">
-                            <textarea name="message" id="" cols="30" rows="10" class="formfield formfield-textarea" placeholder="Enter your message"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" class="formfield formfield-textarea" placeholder="Enter your message" required></textarea>
                         </div>
                         <div>
                             <button type="submit" class="btn-pink" id="submit-btn">
-                  Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
-                </button>
+                                Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
+                            </button>
                         </div>
+                        <div id="form-status" class="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -216,9 +217,9 @@ Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I
                     <div class="footer-section">
                         <h3>Connect With Me</h3>
                         <div class="social-links">
-                            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/Prabhat0571" target="_blank"><i class="fab fa-github"></i>Github</a>
+                            <a href="https://www.linkedin.com/in/prabhat-kumar-b06700152/" target="_blank"><i class="fab fa-linkedin" ><br></i>Linkedin</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -238,12 +239,51 @@ Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I
                 "Web Developer",
                 "UI/UX Designer",
                 "Backend Developer",
-                "Frontend Developer"
+                "Frontend Developer",
+                "Software Developer"
             ],
             loop: true,
             typeSpeed: 100,
             backSpeed: 80,
             backDelay: 1000,
+        });
+
+        // Form submission handling
+        const form = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable submit button and show loading state
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...<i class="submit-icon fa-solid fa-spinner fa-spin"></i>';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
+                    form.reset();
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>';
+            }
         });
     </script>
 
