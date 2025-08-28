@@ -20,10 +20,14 @@ const pointLight = new THREE.PointLight(0xffffff, 1);
 pointLight.position.set(10, 10, 10);
 scene.add(pointLight);
 
-// Galaxy parameters
+// Device detection for performance optimization
+const isMobile = window.innerWidth < 768;
+const isLowEndDevice = navigator.hardwareConcurrency < 4;
+
+// Galaxy parameters (optimized for device performance)
 const parameters = {
-    count: 20000,    // Increased star count
-    size: 0.08,      // Much larger stars
+    count: isMobile ? 10000 : (isLowEndDevice ? 15000 : 20000),    // Adaptive star count
+    size: isMobile ? 0.06 : 0.08,      // Adaptive star size
     radius: 30,
     branches: 7,
     spin: 2,
@@ -231,15 +235,36 @@ let zoomProgress = 0;
 const zoomDuration = 3000; // Increased duration to 3 seconds
 const startTime = Date.now();
 
+// Performance monitoring
+let frameCount = 0;
+let lastTime = performance.now();
+let fps = 60;
+
 // Animation loop
 function animate() {
+    const currentTime = performance.now();
+    frameCount++;
+    
+    if (currentTime - lastTime >= 1000) {
+        fps = frameCount;
+        frameCount = 0;
+        lastTime = currentTime;
+        
+        // Adaptive quality based on FPS
+        if (fps < 30 && !isMobile) {
+            parameters.count = Math.max(10000, parameters.count - 1000);
+        } else if (fps > 55 && !isMobile && parameters.count < 20000) {
+            parameters.count = Math.min(20000, parameters.count + 500);
+        }
+    }
+    
     requestAnimationFrame(animate);
 
     // Handle animation states
-    const currentTime = Date.now();
+    const animationCurrentTime = Date.now();
     
     if (animationState === 'initial') {
-        zoomProgress = Math.min((currentTime - startTime) / zoomDuration, 1);
+        zoomProgress = Math.min((animationCurrentTime - startTime) / zoomDuration, 1);
         
         // Ease out cubic function for smooth zoom
         const easedProgress = 1 - Math.pow(1 - zoomProgress, 3);

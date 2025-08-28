@@ -7,7 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Prabhat Kumar - Full Stack Web Developer Portfolio showcasing projects, skills, and experience in web development." />
-    <title>Prabhat Kumar</title>
+    <meta name="keywords" content="portfolio, web developer, full stack developer, React, Node.js, MongoDB, JavaScript, HTML, CSS" />
+    <meta name="author" content="Prabhat Kumar" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:title" content="Prabhat Kumar - Full Stack Developer" />
+    <meta property="og:description" content="Portfolio showcasing web development projects and skills" />
+    <meta property="og:image" content="./images/userAsset/UserImage.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://your-domain.com/" />
+    <meta property="twitter:title" content="Prabhat Kumar - Full Stack Developer" />
+    <meta property="twitter:description" content="Portfolio showcasing web development projects and skills" />
+    <meta property="twitter:image" content="./images/userAsset/UserImage.png" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#e84949" />
+    <meta name="msapplication-TileColor" content="#e84949" />
+    
+    <title>Prabhat Kumar - Full Stack Developer Portfolio</title>
     <link rel="shortcut icon" href="./images/userAsset/NavLogo2.png" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css" />
@@ -17,6 +40,34 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="cosmic-star"></div>
+        <div class="cosmic-star"></div>
+        <div class="cosmic-star"></div>
+        <div class="cosmic-star"></div>
+        <div class="cosmic-star"></div>
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Welcome to the Cosmos</h2>
+            <p>Initializing your stellar portfolio experience...</p>
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Three.js Canvas -->
     <canvas id="bg-canvas"></canvas>
 
@@ -32,12 +83,11 @@
 
             <!-- Nav Items -->
             <div class="nav-items">
-                <div><a  href="https://drive.google.com/file/d/12SetagwA1hig4RlozBuKxWCsYkUeej_l/view?usp=drive_link" target="_blank">Resume</a></div>
-                <div><a href="#projects">Projects</a></div>
-                <div><a href="#skills">Skills</a></div>
-                <div><a href="#contactme">Contact Me</a></div>
-
-
+                <div><a href="https://drive.google.com/file/d/12SetagwA1hig4RlozBuKxWCsYkUeej_l/view?usp=drive_link" target="_blank">Resume</a></div>
+                <div><a href="#experience" class="nav-link">Experience</a></div>
+                <div><a href="#projects" class="nav-link">Projects</a></div>
+                <div><a href="#skills" class="nav-link">Skills</a></div>
+                <div><a href="#contactme" class="nav-link">Contact Me</a></div>
             </div>
 
         </nav>
@@ -47,10 +97,10 @@
           
             <div class="hero-section-left">
                 <!-- Heading -->
-                <div class="hero-section-heading">Hi! Prabhat Here !!</div>
-                <div class="hero-section-heading herosection-sub-heading">
+                <h1 class="hero-section-heading">Hi! Prabhat Here !!</h1>
+                <h2 class="hero-section-heading herosection-sub-heading">
                     I am a <span class="role"></span>
-                </div>
+                </h2>
 
                 <!-- Description -->
                 <div class="hero-section-description">
@@ -86,35 +136,202 @@
             <div class="btn-pink" id="btn-bottom" >Hire me</div>
         </div>
 
-        <!-- Projects -->
-        <section id="projects" class="projects">
-            <h2 id="projectheading">Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="./images/projects/Project1.jpg" alt="Tint & Orange Project">
-                    <div class="project-info">
-                        <h3>SortSpectrum</h3>
-                        <p>An interactive sorting algorithm visualizer built using React.js, JavaScript, and Express.js. It features real-time animated visualizations of various sorting algorithms along with AI-powered insights </p>
-                        <div class="project-links">
-                           
-                            <a href="https://github.com/Prabhat0571/SortSpectrum"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://sortspectrum.onrender.com/"><i class="fa-solid fa-link"></i></a>
+        <!-- Experience -->
+        <section id="experience" class="experience">
+            <div class="experience-blur-overlay"></div>
+            <div class="experience-content">
+                <h2 class="experience-heading">Work Experience</h2>
+                <div class="experience-container">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="company-logo">
+                                <img src="https://friskydesigns.com/wp-content/uploads/2020/04/cropped-FriskyDesigns-Logo.png" alt="Frisky Designs" />
+                            </div>
+                            <div class="experience-title">
+                                <h3>SDE Intern</h3>
+                                <h4>Frisky Designs Pvt. Ltd</h4>
+                                <p class="duration">Jan 2025 – Mar 2025</p>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Developed and deployed responsive React.js components with Tailwind CSS, reducing page load time by 30%</li>
+                                <li>Built APIs with Node.js/Express enabling scalable course content management and user session tracking</li>
+                                <li>Collaborated in a 5-member Agile team, handling debugging/testing to enhance platform reliability</li>
+                            </ul>
+                        </div>
+                        <div class="experience-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Agile</span>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="company-logo">
+                                <img src="https://img.icons8.com/color/96/000000/ibm.png" alt="IBM" />
+                            </div>
+                            <div class="experience-title">
+                                <h3>AI Intern</h3>
+                                <h4>IBM SkillsBuild</h4>
+                                <p class="duration">July 2024 – Aug 2024</p>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Designed an AI-powered chatbot using IBM Watson and JavaScript for restaurant order automation</li>
+                                <li>Enhanced pipeline accuracy, reducing manual intervention and improving response quality</li>
+                            </ul>
+                        </div>
+                        <div class="experience-tech">
+                            <span class="tech-tag">IBM Watson</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Automation</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <img src="./images/projects/Project2.jpg" alt="Breaking Copyrights Project">
-                    <div class="project-info">
-                        <h3>URL Authentication With AI Assistant</h3>
-                        <p>A machine learning-powered web app that checks the authenticity of URLs using key features and classification models. Integrated with a Gemini-based AI assistant, the tool provides interactive feedback on whether a URL is safe. Built using Python, Streamlit, and ML libraries</p>
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <div class="projects-blur-overlay"></div>
+            <div class="projects-content">
+                <h2 class="projects-heading">Featured Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="./images/projects/Project1.jpg" alt="SortSpectrum Project">
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React.js</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">Express.js</span>
+                                        <span class="tech-tag">AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-title">
+                                <h3>SortSpectrum</h3>
+                                <p class="project-category">Algorithm Visualizer</p>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>An interactive sorting algorithm visualizer built using React.js, JavaScript, and Express.js. It features real-time animated visualizations of various sorting algorithms along with AI-powered insights.</p>
+                        </div>
+                        <div class="project-features">
+                            <ul>
+                                <li>Real-time algorithm visualization</li>
+                                <li>AI-powered insights and analysis</li>
+                                <li>Interactive user interface</li>
+                                <li>Multiple sorting algorithms</li>
+                            </ul>
+                        </div>
                         <div class="project-links">
-                          
-                            <a href="https://github.com/Prabhat0571/Final-Yr-Proj-Prabhat"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://final-yr-proj-prabhat.onrender.com/"><i class="fa-solid fa-link"></i></a>
+                            <a href="https://github.com/Prabhat0571/SortSpectrum" class="project-link github" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                            <a href="https://sortspectrum.onrender.com/" class="project-link live" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
-                </div> 
+
+
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="./images/projects/snap.jpg" alt="Pollsense">
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React.js</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">Express.js</span>
+                                        <span class="tech-tag">socket.io</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-title">
+                                <h3>PollSense</h3>
+                                <p class="project-category">Real-time Poll and chat application</p>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>Developed a scalable real-time polling platform with React, Node.js, Socket.io, and MongoDB, enabling educators to conduct live polls, instantly visualize student responses, and facilitate interactive learning through inbuilt chat for real-time discussions and feedback.</p>
+                        </div>
+                        <div class="project-features">
+                            <ul>
+                                <li>Real-time polling</li>
+                                <li>Insights and history with mongodb</li>
+                                <li>supports interactive chat for real-time discussions</li>
+                                <li>support for multiple users</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Prabhat0571/PollSense" class="project-link github" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                            <a href="https://prabhat-assignment.onrender.com/" class="project-link live" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="./images/projects/Project2.jpg" alt="URL Authentication Project">
+                                <div class="project-overlay">
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Streamlit</span>
+                                        <span class="tech-tag">Machine Learning</span>
+                                        <span class="tech-tag">AI Assistant</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-title">
+                                <h3>URL Authentication With AI Assistant</h3>
+                                <p class="project-category">AI Security Tool</p>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <p>A machine learning-powered web app that checks the authenticity of URLs using key features and classification models. Integrated with a Gemini-based AI assistant, the tool provides interactive feedback on whether a URL is safe.</p>
+                        </div>
+                        <div class="project-features">
+                            <ul>
+                                <li>ML-powered URL analysis</li>
+                                <li>Gemini AI integration</li>
+                                <li>Real-time security feedback</li>
+                                <li>User-friendly interface</li>
+                            </li>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Prabhat0571/Final-Yr-Proj-Prabhat" class="project-link github" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                            <a href="https://final-yr-proj-prabhat.onrender.com/" class="project-link live" target="_blank">
+                                <i class="fa-solid fa-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -228,6 +445,11 @@ Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I
                 </div>
             </div>
         </footer>
+        
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
     </div>
 
     <script src="animation.js"></script>
@@ -248,17 +470,221 @@ Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I
             backDelay: 1000,
         });
 
+        // Navigation active state management
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section, #skills, #contactme');
+
+        function updateActiveNav() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Update active nav on scroll
+        window.addEventListener('scroll', updateActiveNav);
+        
+        // Update active nav on page load
+        updateActiveNav();
+
+        // Experience section scroll animations
+        const experienceSection = document.querySelector('#experience');
+        const experienceBlur = document.querySelector('.experience-blur-overlay');
+        const experienceHeading = document.querySelector('.experience-heading');
+        const experienceContainer = document.querySelector('.experience-container');
+
+        // Projects section scroll animations
+        const projectsSection = document.querySelector('#projects');
+        const projectsBlur = document.querySelector('.projects-blur-overlay');
+        const projectsHeading = document.querySelector('.projects-heading');
+        const projectsContainer = document.querySelector('.projects-container');
+
+        function animateExperienceSection() {
+            if (!experienceSection) return;
+            
+            const rect = experienceSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Start blur effect when section comes into view
+            if (rect.top <= windowHeight * 0.8) {
+                experienceBlur.classList.add('active');
+            }
+            
+            // Animate heading when section is 60% visible
+            if (rect.top <= windowHeight * 0.6) {
+                experienceHeading.classList.add('visible');
+            }
+            
+            // Animate cards when section is 40% visible
+            if (rect.top <= windowHeight * 0.4) {
+                experienceContainer.classList.add('visible');
+            }
+        }
+
+        function animateProjectsSection() {
+            if (!projectsSection) return;
+            
+            const rect = projectsSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Start blur effect when section comes into view
+            if (rect.top <= windowHeight * 0.8) {
+                projectsBlur.classList.add('active');
+            }
+            
+            // Animate heading when section is 60% visible
+            if (rect.top <= windowHeight * 0.6) {
+                projectsHeading.classList.add('visible');
+            }
+            
+            // Animate cards when section is 40% visible
+            if (rect.top <= windowHeight * 0.4) {
+                projectsContainer.classList.add('visible');
+            }
+        }
+
+        // Add scroll event listeners for animations
+        window.addEventListener('scroll', animateExperienceSection);
+        window.addEventListener('scroll', animateProjectsSection);
+        
+        // Trigger on page load
+        animateExperienceSection();
+        animateProjectsSection();
+
+        // Loading screen functionality
+        const loadingScreen = document.getElementById('loading-screen');
+        
+        // Hide loading screen when page is fully loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 800);
+            }, 2000); // Show loading for 2 seconds minimum
+        });
+        
+        // Fallback: Hide loading screen if load event doesn't fire
+        setTimeout(() => {
+            if (loadingScreen && !loadingScreen.classList.contains('fade-out')) {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 800);
+            }
+        }, 5000);
+
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
         // Form submission handling
         const form = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
 
+        // Enhanced form validation
+        const formFields = form.querySelectorAll('.formfield');
+        
+        formFields.forEach(field => {
+            field.addEventListener('blur', () => {
+                validateField(field);
+            });
+            
+            field.addEventListener('input', () => {
+                if (field.classList.contains('error')) {
+                    validateField(field);
+                }
+            });
+        });
+
+        function validateField(field) {
+            const value = field.value.trim();
+            const fieldName = field.name;
+            
+            // Remove existing validation classes
+            field.classList.remove('error', 'success');
+            
+            // Validation rules
+            if (fieldName === 'name' && value.length < 2) {
+                field.classList.add('error');
+                return false;
+            }
+            
+            if (fieldName === 'email' && !isValidEmail(value)) {
+                field.classList.add('error');
+                return false;
+            }
+            
+            if (fieldName === 'subject' && value.length < 5) {
+                field.classList.add('error');
+                return false;
+            }
+            
+            if (fieldName === 'message' && value.length < 10) {
+                field.classList.add('error');
+                return false;
+            }
+            
+            if (value.length > 0) {
+                field.classList.add('success');
+            }
+            
+            return true;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            
+            // Validate all fields
+            let isValid = true;
+            formFields.forEach(field => {
+                if (!validateField(field)) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Please fill all fields correctly before submitting.';
+                formStatus.style.display = 'block';
+                return;
+            }
             
             // Disable submit button and show loading state
             const submitBtn = document.getElementById('submit-btn');
             submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Sending...<i class="submit-icon fa-solid fa-spinner fa-spin"></i>';
+            submitBtn.classList.add('loading');
+            submitBtn.innerHTML = 'Sending...';
 
             try {
                 const response = await fetch(form.action, {
@@ -272,16 +698,24 @@ Skilled in HTML, CSS, TailwindCSS, JavaScript, React.js, Node.js, and MongoDB. I
                 if (response.ok) {
                     formStatus.className = 'form-status success';
                     formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
+                    formStatus.style.display = 'block';
                     form.reset();
+                    
+                    // Clear validation classes
+                    formFields.forEach(field => {
+                        field.classList.remove('error', 'success');
+                    });
                 } else {
                     throw new Error('Failed to send message');
                 }
             } catch (error) {
                 formStatus.className = 'form-status error';
                 formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
+                formStatus.style.display = 'block';
             } finally {
                 // Re-enable submit button
                 submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
                 submitBtn.innerHTML = 'Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>';
             }
         });
